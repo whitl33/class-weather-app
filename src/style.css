@@ -85,6 +85,17 @@ color: rgba(0,0, 0,0.6);
     margin-top: 22px;
     margin-left: 2px;
 }
+.forcast-date{
+    text-align: center;
+
+
+}
+//.forcast-icon{
+
+}
+//.forcast-temp{
+
+}
 footer{
     border-top: .8px solid #775394;
     padding: 8px 0 0  0;
