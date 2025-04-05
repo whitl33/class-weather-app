@@ -6,7 +6,7 @@ body{ background-color:#775394;
 }
 
 a{
-    color: #DA9B82;
+    color:#5B408B;
 }
 
 .weather-app{
@@ -65,7 +65,7 @@ color: rgba(0,0, 0,0.6);
 
 }
 .weather-app-details strong{
-    color:#00ff80;
+    color:aqua;
 
 }
 .weather-app-temperature-container{
@@ -85,17 +85,35 @@ color: rgba(0,0, 0,0.6);
     margin-top: 22px;
     margin-left: 2px;
 }
+.weather-forecast{
+    display:flex;
+    justify-content:space-around;
+    margin-top:30px;
+}
 .forcast-date{
     text-align: center;
-
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0,0, 0,0.6);
+    margin-bottom: 10px;
+}
+.forcast-icon{
+    text-align: center;
+    font-size: 38px;
 
 }
-//.forcast-icon{
-
+.forcast-temperature{
+  text-align: center;
+  color:aqua;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
-//.forcast-temp{
-
+.forcast-temp{
+    padding: 0 8px;
 }
+
+
 footer{
     border-top: .8px solid #775394;
     padding: 8px 0 0  0;
