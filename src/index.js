@@ -10,15 +10,17 @@ let date = new Date(response.data.time * 1000);
 let iconElement = document.querySelector("#icon");
 
 iconElement.innerHTML =  `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
-                        
-
 cityElement.innerHTML = response.data.city;
 timeElement.innerHTML = formatDate(date);
 humidityElement.innerHTML =`${response.data.temperature.humidity}%`;
 windSpeedElement.innerHTML = `${response.data.wind.speed}km/H`;
 temperatureElement.innerHTML = Math.round(temperature); 
 descriptionElement.innerHTML = response.data.condition.description;
+
+getForecast(response.data.city);
 }
+
+
 function formatDate(date){
 let minutes = date.getMinutes();
 let hours = date.getHours();
@@ -43,7 +45,14 @@ let searchInput = document.querySelector("#search-form-input");
 searchCity(searchInput.value);
 }
 
-function displayForecast(){
+function getForecast(city){
+    let apiKey = "o55206ae8847051e1ff334btaf13bafe";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
+}
+
+
+function displayForecast(response){
 let days = ["Tue","Wed","Thur","Fri","Sat"];
 let forecastHtml = " ";
 
@@ -67,4 +76,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",handleSearchSubmit);
 
 searchCity("San Francisco");
-displayForecast();
+
+
