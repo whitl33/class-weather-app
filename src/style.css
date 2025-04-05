@@ -98,19 +98,22 @@ color: rgba(0,0, 0,0.6);
     margin-bottom: 10px;
 }
 .forcast-icon{
-    text-align: center;
-    font-size: 38px;
+   display: block;
+    width: 89px;
+    height: 89px;
+    margin: 0 auto;
 
 }
 .forcast-temperature{
   text-align: center;
-  color:aqua;
+  color:#01ffff;
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
-.forcast-temp{
+.forcast-temp {
     padding: 0 8px;
+   
 }
 
 
