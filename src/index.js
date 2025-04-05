@@ -43,7 +43,28 @@ let searchInput = document.querySelector("#search-form-input");
 searchCity(searchInput.value);
 }
 
+function displayForecast(){
+let days = ["Tue","Wed","Thur","Fri","Sat"];
+let forecastHtml = " ";
+
+days.forEach(function (day) {
+forecastHtml =
+forecastHtml +  ` <div class="weather-forecast-day">
+                    <div class="forcast-date">${day}</div>
+                    <div class="forcast-icon">⛈</div>
+                    <div class="forcast-temperature">
+                        <div class="forcast-temp"><strong>15°</strong>
+                        </div>
+                        <div class="forcast-temp">9°</div>
+                    </div>
+                 </div>
+  `;
+  });
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
+}
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",handleSearchSubmit);
 
 searchCity("San Francisco");
+displayForecast();
